@@ -13,10 +13,10 @@ def lambda_handler(event, context):
     
     ## TO DO: Check that the request has some input body and save it
     if 'body' in event:
-        body = None
+        body = event['body']
     
     ## TO DO: Get the wikipedia "entity" from the body of the request
-    entity = None
+    entity = body['entity']
     res = wikipedia.summary(entity, sentences=1) # first sentence, result
 
     # print statements

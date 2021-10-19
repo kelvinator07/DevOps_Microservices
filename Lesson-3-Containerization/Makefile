@@ -2,7 +2,7 @@ juypter:
 	@cd notebooks; PYTHONPATH=".." jupyter notebook api.ipynb
 
 setup:
-	python3 -m venv ~/.pia-aws
+	python3 -m venv ~/.pia-aws && source ~/.pia-aws/bin/activate
 
 env:
 	#Show information about environment
@@ -24,7 +24,7 @@ test:
 	@cd tests; pytest -vv --cov-report term-missing --cov=web --cov=nlib test_*.py
 
 install:
-	pip install -r requirements.txt 
+	pip3 install -r requirements.txt 
 
 validate-csv:
 	#Binary found here:  https://github.com/Clever/csvlint
