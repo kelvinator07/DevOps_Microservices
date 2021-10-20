@@ -11,9 +11,9 @@ setup:
 	python3 -m venv ~/.devops
 
 install:
-	# This should be run from inside a virtualenv
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+	# This should be run from inside a virtualenv --no-cache-dir
+	pip3 install --upgrade pip &&\
+		pip3 install -r requirements.txt
 
 test:
 	# Additional, optional, tests could go here
